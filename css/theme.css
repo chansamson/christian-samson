@@ -1,0 +1,27 @@
+* {
+    text-wrap: pretty;
+}
+
+.w-04 {
+    width: .4rem;
+}
+
+.w-05 {
+    width: .5rem;
+}
+
+.w-1 {
+    width: 1rem;
+}
+
+.w-2 {
+    width: 2rem;
+    transition: all .1s ease-out;
+}
+
+
+/***/
+nav li:hover .w-2 {
+    width: 4rem;
+    transition: all .1s ease-out;
+}
