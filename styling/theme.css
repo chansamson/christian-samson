@@ -28,7 +28,6 @@
     --space-l: clamp(4rem, 3.04rem + 4.8vw, 7rem);
     --space-m: clamp(4rem, 3.68rem + 1.6vw, 5rem);
     --space-s: clamp(4rem, 4rem + 0vw, 4rem);
-    --gap: clamp(3rem, 0.5rem + 8vw, 5rem);
 }
 
 .t1,
@@ -137,10 +136,29 @@ p {
     padding-bottom: var(--space-s);
 }
 
-.gap {
-    gap: var(--gap);
+.btn-link {
+    text-decoration: none;
 }
- 
+
+.icon {
+    width: 1.5rem;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
 
 /***/
 section#hk79 {
@@ -148,7 +166,6 @@ section#hk79 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-auto-flow: row;
-    gap: var(--gap);
 }
 
 @media (max-width:767px) {
@@ -157,6 +174,10 @@ section#hk79 {
     }
 }
 
+.social-icons img {
+    width: 100%;
+    height: 2rem;
+}
 
 /***/
 
@@ -184,3 +205,5 @@ section#hk79 {
     border-radius: 0.5rem;
     background-color: var(--n-lightest);
 }
+
+/***/
