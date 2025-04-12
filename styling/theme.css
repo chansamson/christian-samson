@@ -207,7 +207,7 @@ section#hk79 {
 }
 
 /***/
-.masonry-item {
+#masonry-gallery .masonry-item {
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     padding-bottom: calc(var(--bs-gutter-x) * 0.5);
 }
