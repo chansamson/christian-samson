@@ -211,3 +211,9 @@ section#hk79 {
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     padding-bottom: calc(var(--bs-gutter-x) * 0.5);
 }
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
