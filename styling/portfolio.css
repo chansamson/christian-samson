@@ -1,0 +1,54 @@
+:root {
+    --primary-brand-color: #0f162b;
+    --brand-accent-color: oklch(86.5% 0.127 207.078);
+    --light-border-color: oklch(27.9% 0.041 260.031);
+    --off-white: oklch(55.4% 0.046 257.417);
+    --badge-bg-color: oklch(30.2% 0.056 229.695); 
+}
+
+body {
+    background-color: var(--primary-brand-color);
+    color: white;
+}
+
+p, ul {
+    margin: 0;
+}
+
+svg {
+    width: 1.5rem;
+    height: 1.5rem;  
+}
+
+svg line, svg polyline {
+    stroke: var(--off-white);
+}
+
+
+.off-white {
+    color:var(--off-white) !important;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid-5 > * {
+    padding: 1rem 0 2rem 0;
+    border-bottom: 1px solid var(--light-border-color);
+}
+
+.tools-list li {
+    color: var(--brand-accent-color);
+    background-color: var(--badge-bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 100vh;
+}
+
+.table-alignment > p,
+.table-alignment > div {
+    display: flex;
+    align-items: center;
+}

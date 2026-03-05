@@ -19,7 +19,7 @@
     --accent-color: #333;
     --white: #fff;
     --black: #000;
-    --n-lightest: #EEEEEE;
+    --n-lightest: #f8f8f8;
     --n-lighter: #CCCCCC;
     --n-light: #aaa;
     --neutral: #666;
@@ -234,9 +234,10 @@ section#hk79 {
 
 .skills__container span {
     padding: 0.5rem 1rem;
-    border: 1px solid var(--n-lighter);
     border-radius: 0.5rem;
-    background-color: var(--n-lightest);
+    background-color: #007cbc;
+    transition: all .3s ease-out;
+    color: white;
 }
 
 /***/
@@ -287,4 +288,16 @@ nav ul li svg {
     #button--back-to-top svg path {
         fill: var(--white);
     }
+}
+
+/***/
+.job-experience-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all .3s ease-out;
+}
+
+.job-experience-card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.15);
+    background-color: var(--n-lightest);
 }
