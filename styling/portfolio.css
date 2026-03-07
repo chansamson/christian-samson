@@ -6,6 +6,17 @@
     --badge-bg-color: oklch(30.2% 0.056 229.695); 
 }
 
+@font-face {
+    font-family: 'Inter';
+    src:
+    url("../fonts/Inter18pt-Regular.woff2") format("woff2"),
+    url("../fonts/Inter18pt-Regular.woff") format("woff");
+}
+
+* {
+    font-family: 'Inter';
+}
+
 body {
     background-color: var(--primary-brand-color);
     color: white;
@@ -16,8 +27,8 @@ p, ul {
 }
 
 svg {
-    width: 1.5rem;
-    height: 1.5rem;  
+    width: 1rem;
+    height: 1rem;  
 }
 
 svg line, svg polyline {
