@@ -1,66 +1,147 @@
 :root {
-    --primary-brand-color: #0f162b;
-    --brand-accent-color: oklch(86.5% 0.127 207.078);
-    --light-border-color: oklch(27.9% 0.041 260.031);
-    --off-white: oklch(55.4% 0.046 257.417);
-    --badge-bg-color: oklch(30.2% 0.056 229.695); 
+  --primary-brand-color: #0f162b;
+  --brand-accent-color: oklch(86.5% 0.127 207.078);
+  --light-border-color: oklch(27.9% 0.041 260.031);
+  --off-white: oklch(55.4% 0.046 257.417);
+  --badge-bg-color: oklch(30.2% 0.056 229.695);
 }
 
 @font-face {
-    font-family: 'Inter';
-    src:
+  font-family: "Inter";
+  src:
     url("../fonts/Inter18pt-Regular.woff2") format("woff2"),
     url("../fonts/Inter18pt-Regular.woff") format("woff");
 }
 
 * {
-    font-family: 'Inter';
+  font-family: "Inter";
 }
 
 body {
-    background-color: var(--primary-brand-color);
-    color: white;
+  background-color: #0f172a;
+  color: white;
 }
 
-p, ul {
-    margin: 0;
+p,
+ul {
+  margin: 0;
 }
 
 svg {
-    width: 1rem;
-    height: 1rem;  
+  width: 1rem;
+  height: 1rem;
 }
 
-svg line, svg polyline {
-    stroke: var(--off-white);
+svg line,
+svg polyline {
+  stroke: var(--off-white);
 }
-
 
 .off-white {
-    color:var(--off-white) !important;
+  color: var(--off-white) !important;
 }
 
 .grid-5 {
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 0.5fr 2fr 1fr;
-    grid-template-rows: 1fr;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr 2fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .grid-5 > * {
-    padding: 1rem 0 2rem 0;
-    border-bottom: 1px solid var(--light-border-color);
+  padding: 1rem 0 2rem 0;
+  border-bottom: 1px solid var(--light-border-color);
 }
 
 .tools-list li {
-    color: var(--brand-accent-color);
-    background-color: var(--badge-bg-color);
-    padding: 0.5rem 1rem;
-    border-radius: 100vh;
-    font-size: 0.75rem;
+  color: var(--brand-accent-color);
+  background-color: var(--badge-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 100vh;
+  font-size: 0.75rem;
 }
 
 .table-alignment > p,
 .table-alignment > div {
+  display: flex;
+  align-items: center;
+}
+
+/***/
+.table {
+  --bs-table-bg: transparent;
+  font-size: 14px;
+
+  tr {
+    border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+
+    &.no-border {
+      border-color: transparent;
+    }
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.5rem 1rem;
+    vertical-align: middle;
+  }
+
+  th,
+  td.project-name {
+    color: #e2e8f0;
+    font-weight: 600;
+  }
+
+  td.project-name {
+    font-size: 16px;
+  }
+
+  td,
+  td.project-link,
+  td.project-link a {
+    color: #94a3b8;
+  }
+
+  td.project-link,
+  td.project-link a {
+    font-weight: 500;
+  }
+
+  td.project-link a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: #5eead4;
+
+      svg {
+        transform: translate(0.25rem, -0.25rem);
+        line,
+        polyline {
+          stroke: #5eead4;
+        }
+      }
+    }
+
+    svg,
+    svg line,
+    svg polyline {
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  ul {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 0.5rem;
+    padding: 0;
+
+    li {
+      color: #5eead4;
+      font-weight: 500;
+      background-color: #2dd4bf1a;
+      border-radius: 100vh;
+      padding: 0.25rem 1rem;
+    }
+  }
 }
